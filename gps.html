@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="stylesheet.css" type="text/css">
-<title>GPS</title>
-<script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
-<script type="text/javascript" charset="utf-8">
+  <head>
+    <title>Device Properties Example</title>
 
-<script>
- // Wait for device API libraries to load
+    <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
     //
     document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -38,60 +36,10 @@
         alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
     }
-</script>
 
-</head>
-
-<body>
-<header>
-
-<table width="100%">
-<tr>
-<td id="nav"><button type="button" onclick="navopen()">NAV</button></td>
-<td align="center"><p style="font-size:34.25px">GPS</p></td>
-<td id="logo"><img src="logo.png"/></td>
-</tr>
-</table>
-
-</header>
-
-<div id="nav-bar">
-
-<table id="nav-bar-table">
-<tr>
-	<td><button type="button" onclick="navclose()">NAVIGATION</button></td>
-</tr>
-	<td><button type="button" onclick="window.location.href='index.html'">HOME</button></td>
-<tr>
-</tr>
-<tr>
-	<td><button type="button" onclick="window.location.href='goals.html'">GOALS</button></td>
-</tr>
-<tr>
-	<td><button type="button">ALERTS</button></td>
-</tr>
-<tr>
-	<td><button type="button" onclick="window.location.href='gps.html'">GPS</button></td>
-</tr>
-<tr>
-	<td><button type="button">CREDIT CARD</button></td>
-</tr>
-<tr>
-	<td><button type="button">ACCOUNT SETTINGS</button></td>
-</tr>
-</table>
-
-</div>
-
-<div id="gps">
-<button type="button" onclick="locate()">Here</button>
-</div>
-
-<p id="geolocation">Finding geolocation...</p>
-
-<script src="js/buttons.js">
-</script>
-
-</body>
+    </script>
+  </head>
+  <body>
+    <p id="geolocation">Finding geolocation...</p>
+  </body>
 </html>
- 
