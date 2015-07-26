@@ -11,6 +11,7 @@ GENERAL
 header {
 	border-bottom: 1px solid black;
 	padding: 0;
+	z-index: 1;
 }
 
 header p {
@@ -75,7 +76,7 @@ input {
 }
 
 #nav-bar  table, #nav-bar td{
-	margin-top: -540px;
+	margin-top: -70px;
 	margin-left: 40px;
 	margin-left: 0px;
 	background-color: #6DFD30;
@@ -235,6 +236,9 @@ HOME
 ----------------------*/
 
 #home {
+	position: fixed;
+	z-index: 1;
+	display: inline-block;
 }
 
 #home table {
@@ -286,4 +290,18 @@ HOME
 	padding-top: 5px;
 }
 
+/*---------------------------------
+GOALS
+---------------------------------*/
 
+#calendar {
+	text-align: center;
+	border: 1px solid black;
+	margin: auto;
+	background-color: black;
+}
+
+#calendar td {
+	background-color: violet;
+	width: 30px;
+}
