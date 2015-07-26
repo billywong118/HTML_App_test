@@ -374,6 +374,7 @@ GPS
 -------------------------------*/
 
 #maps-canvas {
-	height: 100px;
+	height: 50%;
 	width: 80%;
+	margin: 10%;
 }
