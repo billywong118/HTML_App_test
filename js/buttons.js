@@ -18,11 +18,28 @@ function subtractbalance() {
 
 function navopen() {
 	document.getElementById("nav-bar").style.display = 'inline-block';
-	document.getElementById("home").style.margin = '-499px 0 0 0px';
+	var home = document.getElementById("home");
+	var goals = document.getElementById("goals");
+	var goal_creation = document.getElementById("goal-creation");
+	if (home !== null)
+		{home.style.margin = '-499px 0 0 0px';}
+	else if (goals !== null)
+		{goals.style.margin = '-499px 0 0 0px';}
+	else if (goal-creation !== null)
+		{goal_creation.style.margin = '-499px 0 0 0px';}
+	
 }
 
 function navclose() {
 	var navvy = document.getElementById("nav-bar");
 	navvy.style.display = "none";
-	document.getElementById("home").style.margin = '0 0 0 0';
+	var home = document.getElementById("home");
+	var goals = document.getElementById("goals");
+	var goal_creation = document.getElementById("goal-creation");
+	if (home !== null)
+		{home.style.margin = '0 0 0 0';}
+	else if (goals !== null)
+		{goals.style.margin = '0 0 0 0';}
+	else if (goals !== null)
+		{document.getElementById("goal-creation").style.margin = '-499px 0 0 0px';}
 }

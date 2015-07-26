@@ -242,8 +242,8 @@ HOME
 }
 
 #home table {
-	margin-top: 92px;
 	width: 100%;
+	margin: 92px auto 0 auto;
 }
 
 #date {
@@ -294,11 +294,40 @@ HOME
 GOALS
 ---------------------------------*/
 
+#goals {
+	margin: 0px 0 0 0;
+}
+
+#goals table td {
+	padding: 7.5px;
+}
+
+#create-goal {
+	width: 161px;
+	height: 45px;
+	border: none;
+	border-radius: 15%;
+	background-color: red;
+	font-size: 18.75px;
+	color: white;
+}
+
+#view-goals {
+	width: 161px;
+	height: 45px;
+	border: none;
+	border-radius: 15%;
+	background-color: green;
+	font-size: 18.75px;
+	color: white;
+}
+
 #calendar {
 	text-align: center;
 	border: 1px solid black;
 	margin: auto;
 	background-color: black;
+	margin: 12.5px 7.5px;
 }
 
 #calendar td {

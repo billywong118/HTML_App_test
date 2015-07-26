@@ -3,7 +3,7 @@
 <head>
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="stylesheet.css" type="text/css">
-<title>Home</title>
+<title>Create Goal</title>
 </head>
 
 <body>
@@ -12,7 +12,7 @@
 <table width="100%">
 <tr>
 <td id="nav"><button type="button" onclick="navopen()">NAV</button></td>
-<td align="center"><p>Home</p></td>
+<td align="center"><p style="font-size:34.25px">Create Goal</p></td>
 <td id="logo"><img src="logo.png"/></td>
 </tr>
 </table>
@@ -47,58 +47,19 @@
 
 </div>
 
-<div id="home" align="center">
-
+<div id="goal-creation">
 <table>
 
-<tr>
-<td id="date" colspan="2"></td>
-</tr>
 
-<tr>
-<td id="balance-label" colspan="2">Balance</td>
-</tr>
-
-<tr>
-<td id="balance" colspan="2">$849.30</td>
-</tr>
-
-<tr>
-<td class="balance-button" align="center"><button type="button" id="add-balance" onclick="addbalance()">+</button></td>
-<td class="balance-button" align="center"><button type="button" id="subtract-balance" onclick="subtractbalance()">-</button></td>
-</tr>
-<tr>
-
-<td class="change-balance">Add Balance</td>
-<td class="change-balance">Subtract Balance</td>
-</tr>
-</table>
-
+<table>
 </div>
 
-<div id="testing1"></div>
 
 <script src="js/buttons.js">
 </script>
 
 <script>
 
-var d = new Date();
-var weekday = new Array(7);
-weekday[0]=  "Sunday";
-weekday[1] = "Monday";
-weekday[2] = "Tuesday";
-weekday[3] = "Wednesday";
-weekday[4] = "Thursday";
-weekday[5] = "Friday";
-weekday[6] = "Saturday";
-
-var day = weekday[d.getDay()];
-
-var wholedate = Date().split(' ');
-var basicdate = wholedate[1] + ' ' + wholedate[2] + ' ' + wholedate[3];
-
-document.getElementById("date").innerHTML = day + ', ' + basicdate;
 
 </script>
 
