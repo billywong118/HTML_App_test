@@ -335,3 +335,36 @@ GOALS
 	background-color: violet;
 	width: 30px;
 }
+
+/*-------------------------------------
+CREATE GOALS-
+---------------------------------------*/
+
+#goal-creation {
+	position: fixed;
+	color: #676CFB;
+	font-size: 30px;
+}
+
+#goal-creation table {
+		margin: 75px 0 0 55px;
+}
+
+#goal-creation td {
+	padding: 15px 0 ;
+}
+
+#goal-creation input {
+	width: 222px;
+	height: 32px;
+}
+
+#create-goal-button{
+	background-color: #08AE9E;
+	color: white;
+	height: 46px;
+	width: 155px;
+	font-size: 18.75px;
+	border-radius: 15%;
+	border: none;
+}

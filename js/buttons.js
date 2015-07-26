@@ -25,7 +25,7 @@ function navopen() {
 		{home.style.margin = '-499px 0 0 0px';}
 	else if (goals !== null)
 		{goals.style.margin = '-499px 0 0 0px';}
-	else if (goal-creation !== null)
+	else if (goal_creation !== null)
 		{goal_creation.style.margin = '-499px 0 0 0px';}
 	
 }
@@ -40,6 +40,6 @@ function navclose() {
 		{home.style.margin = '0 0 0 0';}
 	else if (goals !== null)
 		{goals.style.margin = '0 0 0 0';}
-	else if (goals !== null)
-		{document.getElementById("goal-creation").style.margin = '-499px 0 0 0px';}
+	else if (goal_creation !== null)
+		{document.getElementById("goal-creation").style.margin = '0 0 0 0px';}
 }
