@@ -373,8 +373,9 @@ CREATE GOALS-
 GPS
 -------------------------------*/
 
-#maps-canvas {
+#map-canvas {
 	height: 50%;
 	width: 80%;
 	margin: 10%;
+	border: 1px solid black;
 }
