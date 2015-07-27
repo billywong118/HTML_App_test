@@ -21,13 +21,15 @@ function navopen() {
 	var home = document.getElementById("home");
 	var goals = document.getElementById("goals");
 	var goal_creation = document.getElementById("goal-creation");
+	var gps = document.getElementById("gps");
 	if (home !== null)
 		{home.style.margin = '-499px 0 0 0px';}
 	else if (goals !== null)
 		{goals.style.margin = '-499px 0 0 0px';}
 	else if (goal_creation !== null)
 		{goal_creation.style.margin = '-499px 0 0 0px';}
-	
+	else if (gps !== null)
+		{gps.style.margin = '-499px 0 0 0px';}
 }
 
 function navclose() {
@@ -36,10 +38,14 @@ function navclose() {
 	var home = document.getElementById("home");
 	var goals = document.getElementById("goals");
 	var goal_creation = document.getElementById("goal-creation");
+	var gps = document.getElementById("gps");
 	if (home !== null)
 		{home.style.margin = '0 0 0 0';}
 	else if (goals !== null)
 		{goals.style.margin = '0 0 0 0';}
 	else if (goal_creation !== null)
-		{document.getElementById("goal-creation").style.margin = '0 0 0 0px';}
+		{goal_creation.style.margin = '0 0 0 0px';}
+	else if (gps !== null)
+		{gps.style.margin = '0 0 0 0px';}
 }
+
