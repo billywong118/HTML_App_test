@@ -21,7 +21,7 @@ function addMarker(location) {
 	icon: image,
 	/*id: prompt('Enter name for this location'),*/
   });
-  marker.myID = prompt('Enter name for this location');
+  /*marker.myID = prompt('Enter name for this location');*/
   markers.push(marker);
 }
 
