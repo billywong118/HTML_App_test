@@ -18,7 +18,7 @@ function addMarker(location) {
   var marker = new google.maps.Marker({
     position: location,
     map: map,
-	icon: image,
+	/*icon: image,*/
 	/*id: prompt('Enter name for this location'),*/
   });
   /*marker.myID = prompt('Enter name for this location');*/
