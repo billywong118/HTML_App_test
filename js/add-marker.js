@@ -14,11 +14,13 @@ function initialize2() {
 
 // Adds a marker to the map.
 function addMarker(location) {
-	var image = 'pink_MarkerO.png';
+	var image = {
+	url: 'pink_MarkerO.png'}
   var marker = new google.maps.Marker({
     position: location,
     map: map,
-	'icon': {'url':image},
+	//Icon does not work on emulator
+	icon: image,
 	/*label: prompt('Enter name for this location'),*/
   });
   /*marker.myID = prompt('Enter name for this location');*/
