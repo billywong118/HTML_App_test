@@ -26,7 +26,7 @@ var map;
 function initialize() {
 	 <!--var myLatlng = new google.maps.LatLng(-25.363882,131.044922);-->
   var mapOptions = {
-    zoom: 6,
+    zoom: 16,
 	<!--center: myLatlng-->
   };
   
@@ -78,10 +78,10 @@ function handleNoGeolocation(errorFlag) {
   var infowindow = new google.maps.InfoWindow(options);
   map.setCenter(options.position);
 }
-
 google.maps.event.addDomListener(window, 'load', initialize);
 
-    </script>
+
+</script>
 <script src="js/add-marker.js"></script>
   </head>
   <body>
@@ -129,15 +129,15 @@ google.maps.event.addDomListener(window, 'load', initialize);
 <div id="gps">
 <table>
 	<tr>
-	<td><button type="button" style="margin-left:10px;width:330px;height:67px;color:white;background-color:red;border-radius:15%;font-size:18px">ADD SPECIAL LOCATIONS FOR ALERT</button></td>
+	<td><button type="button" onclick="addlocation()" id="add-marker">ADD SPECIAL LOCATIONS FOR ALERT</button></td>
 	</tr>
 	<tr>
-	<td><button type="button" style="margin-left:10px;width:330px;height:67px;color:white;background-color:blue;border-radius:15%;font-size:18px">REMOVE LOCATIONS</button></td>
+	<td><button type="button" onclick="deleteMarker()" id="remove-marker">REMOVE LOCATIONS</button></td>
 	</tr>
 </table>
 </div>
 
-	
+
 <div id="map-canvas"></div>
 	
 <script src="js/buttons.js">
