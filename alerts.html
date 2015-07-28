@@ -3,20 +3,19 @@
 <head>
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="stylesheet.css" type="text/css">
-<title>Goals</title>
+<title>Alerts</title>
 </head>
 
-<body onload="setToday()">
+<body>
 <header>
 
 <table width="100%">
 <tr>
 <td id="nav"><button type="button" onclick="navopen()">NAV</button></td>
-<td align="center"><p>Goals</p></td>
+<td align="center"><p>Alerts</p></td>
 <td id="logo"><img src="logo.png"/></td>
 </tr>
 </table>
-
 
 </header>
 
@@ -48,80 +47,42 @@
 
 </div>
 
-
-<div id="goals">
+<div id="alerts">
 
 <table>
 <tr>
-<td><button type="button" id="create-goal" onclick="window.location.href='create-goal.html'">CREATE A GOAL</button></td>
-<td><button type="button" id="view-goals" onclick="window.location.href='current-goals.html'">CURRENT GOALS</button></td>
+<td>Alerts</td>
+<td>
+<input type="radio" name="alert-status" value="ON"> ON
+<input type="radio" name="alert-status" value="OFF"> OFF
+</td>
 </tr>
-</table>
+<tr>
+<td>GPS Alert</td>
+<td><input type="checkbox" name="gps-status"></td>
+</tr>
+<tr>
+<td>Goals Alert</td>
+<td><input type="checkbox" name="goals-status"></td>
+</tr>
+<tr>
+<td>Daily Check-In Alert</td>
+<td><input type="checkbox" name="checkin-status"></td>
+</tr>
 
-<table id="calendar">
-<tr>
-<td>Sun</td>
-<td>Mon</td>
-<td>Tue</td>
-<td>Wed</td>
-<td>Thu</td>
-<td>Fri</td>
-<td>Sat</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td id="next-week"></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
 </table>
 
 </div>
 
+
 <script src="js/buttons.js">
 </script>
 
-<script type="text/javascript" src="js/calendar.js"></script>
+<script>
 
+
+</script>
 
 </body>
 </html>
+ 
