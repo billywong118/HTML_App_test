@@ -118,3 +118,48 @@ else { days=28; }
 return (days);
 }
 
+function getwordMonth () {
+	var show = document.getElementById("month");
+	var month = new Date().getMonth();
+	switch (month) {
+		case 0:
+			show.innerHTML = 'January ' + new Date().getFullYear();
+			break;
+		case 1:
+			show.innerHTML = 'February ' + new Date().getFullYear();
+			break;
+		case 2:
+			show.innerHTML = 'March ' + new Date().getFullYear();
+			break;
+		case 3:
+			show.innerHTML = 'April ' + new Date().getFullYear();
+			break;
+		case 4:
+			show.innerHTML = 'May ' + new Date().getFullYear();
+			break;
+		case 5:
+			show.innerHTML = 'June ' + new Date().getFullYear();
+			break;
+		case 6:
+			show.innerHTML = 'July ' + new Date().getFullYear();
+			break;
+		case 7:
+			show.innerHTML = 'August ' + new Date().getFullYear();
+			break;
+		case 8:
+			show.innerHTML = 'September ' + new Date().getFullYear();
+			break;
+		case 9:
+			show.innerHTML = 'October ' + new Date().getFullYear();
+			break;
+		case 10:
+			show.innerHTML = 'November ' + new Date().getFullYear();
+			break;
+		case 11:
+			show.innerHTML = 'December ' + new Date().getFullYear();
+			break;
+	}
+}
+
+
+getwordMonth()
