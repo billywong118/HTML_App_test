@@ -33,6 +33,8 @@ function navopen() {
 		{alerts.style.margin = '-339px 0 0 0px';}
 	else if (gps !== null)
 		{gps.style.margin = '-339px 0 0 0px';}
+	
+	/*-80px for each extra thing on nav bar*/
 }
 
 function navclose() {

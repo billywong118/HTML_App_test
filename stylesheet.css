@@ -252,7 +252,7 @@ HOME
 
 #home table {
 	width: 90%;
-	margin: 92px 0 0 10%;
+	margin: 92px 0 0 15px;
 	text-align: center;
 }
 
@@ -275,6 +275,7 @@ HOME
 	font-size: 45px;
 	color: red;
 	text-align: center;
+	/*MAKE SURE BALANCE DOES NOT FLOW TOO MUCH TO THE RIGHT*/
 }
 
 #add-balance, #subtract-balance {
@@ -311,12 +312,13 @@ GOALS
 
 #goals table td {
 	padding: 7.5px;
+	text-align: center;
 }
 
 #create-goal {
-	width: 161px;
+	width: 330px;
 	height: 45px;
-	border: none;
+	border: 1px solid #c00;
 	border-radius: 15%;
 	background-color: red;
 	font-size: 18.75px;
@@ -346,6 +348,25 @@ GOALS
 	width: 30px;
 }
 
+#current-goals{
+	width: 90%;
+	text-align: center;
+	margin: auto;
+	color: green;
+	font-size: 40px;
+}
+
+#current-goals td {
+
+}
+
+.current_goal {
+	text-align: left;
+	background-color: #0ff;
+	color: #651BD2;
+	font-size: 23px;
+}
+
 /*-------------------------------------
 CREATE GOALS-
 ---------------------------------------*/
@@ -368,6 +389,14 @@ CREATE GOALS-
 #goal-creation input {
 	width: 222px;
 	height: 32px;
+}
+
+#goal-cost {
+	width: 180px;
+}
+
+.notcostgoal {
+	width: 222px;
 }
 
 #create-goal-button{
