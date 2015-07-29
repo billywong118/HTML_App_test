@@ -24,15 +24,15 @@ function navopen() {
 	var alerts = document.getElementById("alerts");
 	var gps = document.getElementById("gps");
 	if (home !== null)
-		{home.style.margin = '-499px 0 0 0px';}
+		{home.style.margin = '-339px 0 0 0px';}
 	else if (goals !== null)
-		{goals.style.margin = '-499px 0 0 0px';}
+		{goals.style.margin = '-339px 0 0 0px';}
 	else if (goal_creation !== null)
-		{goal_creation.style.margin = '-499px 0 0 0px';}
+		{goal_creation.style.margin = '-339px 0 0 0px';}
 	else if (alerts !== null)
-		{alerts.style.margin = '-499px 0 0 0px';}
+		{alerts.style.margin = '-339px 0 0 0px';}
 	else if (gps !== null)
-		{gps.style.margin = '-499px 0 0 0px';}
+		{gps.style.margin = '-339px 0 0 0px';}
 }
 
 function navclose() {
@@ -41,6 +41,7 @@ function navclose() {
 	var home = document.getElementById("home");
 	var goals = document.getElementById("goals");
 	var goal_creation = document.getElementById("goal-creation");
+	var alerts = document.getElementById("alerts");
 	var gps = document.getElementById("gps");
 	if (home !== null)
 		{home.style.margin = '0 0 0 0';}
@@ -54,3 +55,12 @@ function navclose() {
 		{gps.style.margin = '0 0 0 0px';}
 }
 
+function alert_status() {
+	var switcher = document.getElementById("myonoffswitch");
+	if (!switcher.checked) {
+		document.getElementById("alert-options").style.display = 'none';
+	}
+	else {
+		document.getElementById("alert-options").style.display = 'inline-block';
+	}
+}

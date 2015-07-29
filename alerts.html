@@ -37,26 +37,29 @@
 <tr>
 	<td><button type="button" onclick="window.location.href='gps.html'">GPS</button></td>
 </tr>
-<tr>
-	<td><button type="button">CREDIT CARD</button></td>
-</tr>
-<tr>
-	<td><button type="button">ACCOUNT SETTINGS</button></td>
-</tr>
 </table>
 
 </div>
 
 <div id="alerts">
 
-<table>
+<table id="alert-head">
 <tr>
-<td>Alerts</td>
+<td width="230px">Alerts</td>
 <td>
-<input type="radio" name="alert-status" value="ON"> ON
-<input type="radio" name="alert-status" value="OFF"> OFF
+<div class="onoffswitch">
+    <input type="checkbox" onclick="alert_status()" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+    <label class="onoffswitch-label" for="myonoffswitch">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+</div>
 </td>
 </tr>
+</table>
+
+<table id="alert-options">
+
 <tr>
 <td>GPS Alert</td>
 <td><input type="checkbox" name="gps-status"></td>
