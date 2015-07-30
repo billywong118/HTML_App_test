@@ -23,13 +23,17 @@ function subtractbalance() {
 /*work on where the negative sign is */
 
 function updateBalance(new_balance) {
+	
+	var email = window.localStorage.getItem("User");
+
 	var balance = Number(document.getElementById("balance").innerHTML.substring(1));
 	var object;
 	var query = new Parse.Query(UserObject);
 	query.find({
 	success: function(results) {
 		for (var i = 0; i < results.length; i++) {
-			object = results[i];		
+			if (results[i].get("username") === email) {
+			object = results[i];}		
 		}
 		object.set('balance',balance);
 		object.save(null, {

@@ -10,9 +10,6 @@ var object;
 var passcheck;
 
 
-/*FAULTY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-//ONLY THE LOCAL STORAGE IS RELEVANT*/
-//MODEL THE CODE FROM INDEx
 var query = new Parse.Query(UserObject);
 query.equalTo("username", email);
 query.find({
@@ -22,6 +19,7 @@ query.find({
 		passcheck = results[i].get("password");
 		};
 		if (passcheck === password) {
+			window.localStorage.clear();
 			window.localStorage.setItem("User", email);
 			alert("You have successfully logged in");
 			window.location.href = 'index.html';

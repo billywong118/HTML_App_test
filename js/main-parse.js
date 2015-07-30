@@ -5,6 +5,21 @@ var email = window.localStorage.getItem("User");
 var object;
 
 function get_balance() {
+/*	var findUser = new Parse.Query(UserObject);
+	findUser.find({
+	success: function(results) {
+		for (var i = 0; i < results.length; i++) {
+			if (results[i].get("username") === email) {
+			object = results[i];}			
+		}
+		console.log(object.get("username"));
+		console.log(object.id);
+	},
+	error: function(error) {
+		alert("Error: " + error.code + " " + error.message);
+	}
+	});*/
+	
 	var balance;
 	var query = new Parse.Query(UserObject);
 	query.select('username','balance');
@@ -13,9 +28,9 @@ function get_balance() {
 		/*alert("Successfully retrieved " + results.length + " scores.");*/
 		// Do something with the returned Parse.Object values
 		for (var i = 0; i < results.length; i++) {
-			object = results[i].id;
+			if (results[i].get("username") === email) {
 			balance = results[i].get("balance");
-			
+			}
 		}
 		document.getElementById("balance").innerHTML = '$' + balance.toFixed(2).toString();
 		window.localStorage.setItem("Balance", balance)
@@ -29,7 +44,6 @@ function get_balance() {
 
 /*WHAT TO WORK ON:
 
--WHEN CHANGING BALANCE, MAKE SURE CHANGES ARE APPLIED TO THE PARSE DATABASE(UPDATING OBJECTS)
 -NOTIFICATIONS!!!!!!!!!!!!!
 
 */

@@ -2,6 +2,11 @@ var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var labelIndex = 0;
 var markers = [];
 
+Parse.initialize('M1ifyaGlqMi0qLtPDMcdr5vl75mCxon6FizGfEdJ','UOnRWMWcLfmFC8fsD0IYAnp46DLiUfEu9nGwbIzx');
+var UserObject = Parse.Object.extend("Users");
+
+/*PUT CODE HERE TO RETRIEVE USER-SET LOCATIONS*/
+
 
 function initialize2() {
 
@@ -21,11 +26,35 @@ function addMarker(location) {
     map: map,
 	//Icon does not work on emulator
 	icon: image,
-	/*label: prompt('Enter name for this location'),*/
+	title: prompt('Enter name for this location')
   });
   /*marker.myID = prompt('Enter name for this location');*/
   markers.push(marker);
+  /*console.log(markers[0].title);*/
+  /*updateLocations(markers)*/;
 }
+
+function updateLocations(new_locations) {
+	var object;
+	var query = new Parse.Query(UserObject);
+	query.find({
+	success: function(results) {
+		for (var i = 0; i < results.length; i++) {
+			object = results[i];		
+		}
+		object.set('locations',new_locations);
+		object.save(null, {
+		success: function(object) {
+		alert('Locations updated!');
+  }
+});
+	},
+	error: function(error) {
+		alert("Error: " + error.code + " " + error.message);
+	}
+	})
+}
+
 
 // Sets the map on all markers in the array.
 function setAllMap(map) {
