@@ -50,8 +50,9 @@ userObject.save(null, {
   success: function(userObject) {
     // Execute any logic that should take place after the object is saved.
     alert('New account for ' + email + ' created!');
+	window.localStorage.setItem("User", email);
 	alert("You have successfully logged in");
-	window.location.href = 'index.html';
+	window.location.href = 'home.html';
   },
   error: function(userObject, error) {
     // Execute any logic that should take place if the save fails.
