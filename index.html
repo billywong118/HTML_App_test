@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="js/parse-1.5.0.min.js"></script>
+<script src="js/main-parse.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="stylesheet.css" type="text/css">
 <title>Home</title>
 </head>
 
-<body>
+<body onload="get_balance()">
 <header>
 
 <table width="100%">
@@ -37,6 +39,9 @@
 <tr>
 	<td><button type="button" onclick="window.location.href='gps.html'">GPS</button></td>
 </tr>
+<tr>
+	<td><button type="button" onclick="logout()">LOGOUT</button></td>
+</tr>
 </table>
 
 </div>
@@ -54,7 +59,7 @@
 </tr>
 
 <tr>
-<td id="balance" colspan="2">$849.30</td>
+<td id="balance" colspan="2"></td>
 </tr>
 
 <tr>
@@ -70,7 +75,7 @@
 
 </div>
 
-<div id="testing1"></div>
+<div id="test"></div>
 
 <script src="js/buttons.js"></script>
 <script>
@@ -91,6 +96,10 @@ var wholedate = Date().split(' ');
 var basicdate = wholedate[1] + ' ' + wholedate[2] + ' ' + wholedate[3];
 
 document.getElementById("date").innerHTML = day + ', ' + basicdate;
+
+var User = window.localStorage.getItem("User");
+console.log(User);
+
 
 </script>
 

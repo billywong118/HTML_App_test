@@ -2,6 +2,8 @@
 GENERAL
 -----------------------------*/
 
+/*width of screen is 390px*/
+
 * {
 	font-family: 'Ubuntu', sans-serif;
 	margin: 0;
@@ -323,6 +325,7 @@ GOALS
 	background-color: red;
 	font-size: 18.75px;
 	color: white;
+	margin-left: 20px;
 }
 
 #view-goals {
@@ -340,7 +343,7 @@ GOALS
 	border: 1px solid black;
 	margin: auto;
 	background-color: black;
-	margin: 12.5px 7.5px;
+	margin: 12.5px 0px 12.5px 20px;
 }
 
 #calendar td {

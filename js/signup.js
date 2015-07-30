@@ -12,34 +12,64 @@ var user = $("#user").val();
 var password = $("#password").val();
 var password2 = $("#password2").val();*/
 
-var first_name = document.getElementById("first_name").value;
-var last_name = document.getElementById("last_name").value;
+var full_name = document.getElementById("full_name").value;
 var email = document.getElementById("email").value;
-var email2 = document.getElementById("email2").value;
-var user = document.getElementById("user").value;
 var password = document.getElementById("password").value;
 var password2 = document.getElementById("password2").value;
+var email_used;
 
-/*document.getElementById().value*/
+var query = new Parse.Query(UserObject);
+query.equalTo("username", email);
+query.find({
+  success: function(results) {
+    if (results.length >= 1) {
+		var email_used = true;
+		alert("The email is currently being used. Please use another one");
+		 /*for (var i = 0; i < results.length; i++) {
+		var object = results[i];
+		alert(object.id)
+		};*/
+	}
+	else {
+		email_used = false;
+	}
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
 
 
-userObject.set("first_name", first_name);
-userObject.set("last_name", last_name);
-userObject.set("email", email);
-userObject.set("user", user);
+if (password === password2 && full_name.length !== 0 && email.length !== 0 && password.length !== 0 && !email_used) {
+userObject.set("full_name", full_name);
+userObject.set("username", email);
 userObject.set("password", password);
+userObject.set("balance", 0);
 
 userObject.save(null, {
   success: function(userObject) {
     // Execute any logic that should take place after the object is saved.
-    alert('New object created' + email);
+    alert('New account for ' + email + ' created!');
+	alert("You have successfully logged in");
+	window.location.href = 'index.html';
   },
   error: function(userObject, error) {
     // Execute any logic that should take place if the save fails.
     // error is a Parse.Error with an error code and message.
-    alert('Failed to create new object, with error code: ' + error.message);
+    //alert('Failed to create new object, with error code: ' + error.message);
   }
 });
+
+event.preventDefault();}
+
+else if (password !== password2){
+	alert('Please make sure your passwords are the same!')
+}
+
+else if (full_name.length == 0 || email.length == 0 || password.length == 0) {
+	alert('Please make sure all fields are filled!')
+}
+
 }
 
 
