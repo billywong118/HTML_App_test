@@ -17,7 +17,6 @@ query.find({
     if (results.length >= 1) {
 		 for (var i = 0; i < results.length; i++) {
 		passcheck = results[i].get("password");
-		};
 		if (passcheck === password) {
 			window.localStorage.clear();
 			window.localStorage.setItem("User", email);
@@ -26,6 +25,9 @@ query.find({
 		}
 		else {
 			alert ("Incorrect password");
+		};
+		
+		
 		}
 	}
 	else {
