@@ -218,7 +218,7 @@ SIGN UP
     width: 21px;
 }
 
-#back-to-welcome a:hover, a:focus {
+#back-to-welcome a:hover, #back-to-welcome a:focus {
     border-color: #b50007;
     background: #7e0004;
     background: -moz-linear-gradient(top, #b50007 0%, #7e0004 100%);
@@ -228,7 +228,7 @@ SIGN UP
     background: linear-gradient(top, #b50007 0%, #7e0004 100%);
 }
 
-#back-to-welcome a:hover:before, a:focus:before {
+#back-to-welcome a:hover:before, #back-to-welcome a:focus:before {
     border-color: #b50007;
     background: #7e0004;
     background: -moz-linear-gradient(-45deg, #b50007 0%, #7e0004 100%);
