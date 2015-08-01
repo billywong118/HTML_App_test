@@ -380,6 +380,18 @@ HOME
 	padding-top: 5px;
 }
 
+#moneyMinus {
+	margin-top: 220px;
+	margin-left: 5%;
+	background-color: black;
+	position: fixed;
+	z-index: 5;
+	border: 5px outset grey;
+	color: white;
+	font-size: 20px;
+	width: 90%;
+}
+
 /*---------------------------------
 GOALS
 ---------------------------------*/
