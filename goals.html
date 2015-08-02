@@ -6,7 +6,7 @@
 <title>Goals</title>
 </head>
 
-<body onload="setToday()">
+<body onload="setToday(); get_goals()">
 <header>
 
 <table width="100%">
@@ -113,16 +113,30 @@
 <td></td>
 <td></td>
 </tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
 </table>
 
-</div>
 
-</br>
-
-<table id="current-goals">
-<tr><th align="center">Current Goals</th></tr>
+<table id="current_goals">
 <tr>
-<td class="current_goal">
+<td>
+<div id="current-goals_label">
+<b><center>Current Goals</center></b>
+</div>
+</td>
+</tr>
+
+<!--<tr>
+<td>
+<div class="current_goal">
 Goal:</br>
 </br>
 Cost:</br>
@@ -133,14 +147,23 @@ Money Saved:</br>
 </br>
 Money Needed:</br>
 </br>
+</div>
 </td>
-</tr>
-
+</tr>-->
 
 </table>
 
-<script src="js/buttons.js">
-</script>
+
+</div>
+
+<div id="h"></div>
+
+</br>
+
+
+
+
+<script src="js/buttons.js"></script>
 
 <script type="text/javascript" src="js/calendar.js"></script>
 <script src="js/parse-1.5.0.min.js"></script>

@@ -331,7 +331,7 @@ HOME
 
 #home table {
 	width: 90%;
-	margin: 92px 0 0 15px;
+	margin: 92px 0 0 10%;
 	text-align: center;
 }
 
@@ -440,23 +440,26 @@ GOALS
 	width: 30px;
 }
 
-#current-goals{
-	width: 90%;
+#current_goals {
+	margin: auto;
+	width: 95%;
+}
+
+#current-goals_label{
 	text-align: center;
 	margin: auto;
 	color: green;
 	font-size: 40px;
 }
 
-#current-goals td {
-
-}
-
 .current_goal {
+	width: 100%;
 	text-align: left;
 	background-color: #0ff;
 	color: #651BD2;
 	font-size: 23px;
+	margin: 25px auto auto 0;
+	border: 1px solid black;
 }
 
 /*-------------------------------------
@@ -478,24 +481,22 @@ CREATE GOALS-
 	padding: 15px 0 ;
 }
 
-#goal-creation input {
+#goal_name, #goal_date {
 	width: 222px;
 	height: 32px;
 }
 
-#goal-cost {
-	width: 180px;
+#goal_cost {
+	width: 205px;
+	height: 32px;
 }
 
-.notcostgoal {
-	width: 222px;
-}
 
 #create-goal-button{
 	background-color: #08AE9E;
 	color: white;
 	height: 46px;
-	width: 155px;
+	width: 145px;
 	font-size: 18.75px;
 	border-radius: 15%;
 	border: none;

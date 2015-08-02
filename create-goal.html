@@ -49,29 +49,37 @@
 <div id="goal-creation">
 <table>
 <tr>
-<td class="notcostgoal">Goal:</br><input type="text"></td>
+<td>Goal:</br><input type="text" id="goal_name"></td>
 </tr>
 <tr>
-<td id="cost-goal">Cost:</br>$<input type="number"></td>
+<td>Cost:</br>$<input type="number" id="goal_cost"></td>
 </tr>
 <tr>
-<td class="notcostgoal">Aim Date:</br><input type="date"></td><!--Should be a calendar input in the final-->
+<td>Aim Date:</br><input type="date" id="goal_date"></td>
 </tr>
 <tr>
-<td><input id="create-goal-button" type="submit" value="CREATE"></td>
+<td><input id="create-goal-button" type="submit" value="CREATE" onclick="create_goal()"></td>
 </tr>
 
 <table>
 </div>
 
-
-<script src="js/buttons.js">
-</script>
+<div id="h"></div>
 
 <script>
 
+/*var date1 = new Date("2015-8-5");
+var date2 = new Date("2010-12-12");
+var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+var diffDays = Math.round(timeDiff / (1000 * 3600 * 24)); 
+alert(diffDays)*/ 
 
 </script>
+
+<script src="js/buttons.js"></script>
+
+<script src="js/parse-1.5.0.min.js"></script>
+<script src="js/main-parse.js"></script>
 
 </body>
 </html>

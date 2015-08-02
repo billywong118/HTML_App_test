@@ -27,12 +27,21 @@ var second_week = [];
 var third_week = [];
 var fourth_week = [];
 var fifth_week = [];
+var sixth_week = [];
+
+
+function HowmanydaysInMonth(month, year) {
+    return new Date(year, month, 0).getDate();
+}
+
+var daysinMonth = HowmanydaysInMonth(new Date().getMonth(), new Date().getYear());
+
 
 for (i = 0; i < startingPos; i++) {
 	first_week.push('')
 }
 
-for (i = 1; i < days-2; i++) {
+for (i = 1; i <= daysinMonth; i++) {
 	if (first_week.length < 7) {
 		first_week.push(i)
 	}
@@ -45,8 +54,11 @@ for (i = 1; i < days-2; i++) {
 	else if (fourth_week.length < 7) {
 		fourth_week.push(i)
 	}
-	else {
+	else if (fifth_week.length < 7) {
 		fifth_week.push(i)
+	}
+	else {
+		sixth_week.push(i)
 	}
 };
 
@@ -93,9 +105,22 @@ for (i=0; i < fifth_week.length; i++) {
 }
 }
 
+for (i=0; i < sixth_week.length; i++) {
+	table.rows[6].cells[i].innerHTML = sixth_week[i];
+	if (fifth_week[i] === day) {
+		table.rows[6].cells[i].style.backgroundColor = 'yellow';
+}
+}
+
+
+if (sixth_week.length === 0) {
+	table.deleteRow(6);
+}
+
 if (fifth_week.length === 0) {
 	table.deleteRow(5);
 }
+
 
 /*for (i = 1; i < table.rows.length; i++) {
 	for (j = 0; i < 7; i++) {
