@@ -43,7 +43,7 @@ function get_goals() {
 		}
 		for (var i = 0; i < goals.length; i++) {
 		var goals_holder = document.getElementById("current_goals");
-		var row = goals_holder.insertRow();
+		var row = goals_holder.insertRow(-1);
 		var cell = row.insertCell();
 		var timeDiff = Math.abs(new Date((goals[i])[2]).getTime() - new Date(today).getTime());
 		var diffDays = Math.round(timeDiff / (1000 * 60 * 60 * 24)); 
