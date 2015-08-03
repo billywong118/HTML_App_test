@@ -53,7 +53,7 @@ userObject.save(null, {
     alert('New account for ' + email + ' created!');
 	window.localStorage.setItem("User", email);
 	alert("You have successfully logged in");
-	window.location.href = 'home.html';
+	window.location.href = 'index.html';
   },
   error: function(userObject, error) {
     // Execute any logic that should take place if the save fails.
