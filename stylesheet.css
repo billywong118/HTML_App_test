@@ -10,14 +10,13 @@ GENERAL
 }
 
 body {
-	background-color: #6DFD6F;
+	/*background-color: #6DFD6F;*/
 }
 
 header {
 	border-bottom: 1px solid black;
 	padding: 0;
 	z-index: 1;
-	background-color: #6DFD6F;
 }
 
 header p {
@@ -112,7 +111,6 @@ WELCOME
 
 #welcome {
 	text-align: center;
-	background-color: #6DFD6F;
 }
 
 #hello {
@@ -139,7 +137,6 @@ SIGN UP
 	font-size: 25px;
 	color: #676CFB;
 	margin-left: 13px;
-	background-color: #6DFD6F;
 }
 
 #signup input {
@@ -252,7 +249,6 @@ LOGIN
 	margin-left: 10%;
 	color: #676CFB;
 	font-size: 30px;
-	background-color: #6DFD6F;
 }
 
 #login-id {
@@ -292,7 +288,6 @@ FORGOT PASSWORD
 	margin-left: 10%;
 	color: #676CFB;
 	font-size: 30px;
-	background-color: #6DFD6F;
 }
 
 #forgot input {
@@ -326,7 +321,6 @@ HOME
 	position: fixed;
 	z-index: 1;
 	display: inline-block;
-	background-color: #6DFD6F;
 }
 
 #home table {
@@ -398,7 +392,6 @@ GOALS
 
 #goals {
 	margin: 0px 0 0 0;
-	background-color: #6DFD6F;
 }
 
 #goals table td {
@@ -470,7 +463,6 @@ CREATE GOALS-
 	position: fixed;
 	color: #676CFB;
 	font-size: 30px;
-	background-color: #6DFD6F;
 }
 
 #goal-creation table {
