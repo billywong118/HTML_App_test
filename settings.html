@@ -3,16 +3,16 @@
 <head>
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="stylesheet.css" type="text/css">
-<title>Home</title>
+<title>Settings</title>
 </head>
 
-<body onload="get_balance()">
-<header>
+<body>
+<header id="header">
 
 <table width="100%">
 <tr>
-<td id="nav"><button type="button" onclick="navopen()">NAV</button></td>
-<td align="center"><p>Home</p></td>
+<td id="nav"><button type="button" onclick="navopen()" id="nav-open">NAV</button></td>
+<td align="center"><p>Settings</p></td>
 <td id="logo"><img src="logo.png"/></td>
 </tr>
 </table>
@@ -45,12 +45,23 @@
 
 <div id="settings">
 
+<div id="reset-notice">Reset Your Password</div>
+
 <table>
 <tr>
+<td>Current password:</td>
+<td><input type="password" id="current_pass"></td>
+</tr>
+<tr>
+<td>Enter new password:</td>
 <td><input type="password" id="resetpass1"></td>
 </tr>
 <tr>
+<td>Confirm new password:</td>
 <td><input type="password" id="resetpass2"></td>
+</tr>
+<tr>
+<td colspan="2"><center><input type="submit" value="RESET PASSWORD" id="confirm_reset"></center></td>
 </tr>
 
 </div>

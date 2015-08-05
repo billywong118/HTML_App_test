@@ -58,18 +58,20 @@ function navopen() {
 	var alerts = document.getElementById("alerts");
 	var gps = document.getElementById("gps");
 	var settings = document.getElementById("settings");
+	document.getElementById("nav-open").style.display = "none";
+	document.getElementById("header").style.marginLeft = '160px';
 	if (home !== null)
-		{home.style.margin = '-323px 0 0 0px';}
+		{home.style.margin = '-323px 0 0 160px';}
 	else if (goals !== null)
-		{goals.style.margin = '-323px 0 0 0px';}
+		{goals.style.margin = '-323px 0 0 160px';}
 	else if (goal_creation !== null)
-		{goal_creation.style.margin = '-323px 0 0 0px';}
+		{goal_creation.style.margin = '-323px 0 0 160px';}
 	else if (alerts !== null)
-		{alerts.style.margin = '-323px 0 0 0px';}
+		{alerts.style.margin = '-323px 0 0 160px';}
 	else if (gps !== null)
-		{gps.style.margin = '-323px 0 0 0px';}
+		{gps.style.margin = '-323px 0 0 160px';}
 	else if (settings !== null)
-		{settings.style.margin = '-323px 0 0 0px';}
+		{settings.style.margin = '-323px 0 0 160px';}
 	
 }
 
@@ -82,6 +84,8 @@ function navclose() {
 	var alerts = document.getElementById("alerts");
 	var gps = document.getElementById("gps");
 	var settings = document.getElementById("settings");
+	document.getElementById("nav-open").style.display = "block";
+	document.getElementById("header").style.marginLeft = '0px';
 	if (home !== null)
 		{home.style.margin = '0 0 0 0';}
 	else if (goals !== null)

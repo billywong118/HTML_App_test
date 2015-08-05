@@ -466,7 +466,7 @@ CREATE GOALS-
 
 #goal_notice {
 	font-size: 20px;
-	margin-top: 45px;
+	margin-top: 20px;
 	text-align: center;
 }
 
@@ -477,7 +477,7 @@ CREATE GOALS-
 }
 
 #goal-creation table {
-	margin: 30px 0 0 55px;
+	margin: 30px 0 0 15%;
 }
 
 #goal-creation td {
@@ -617,4 +617,42 @@ ALERTS
 	/*SWITCH BUTTON*/
 	
 
+/*--------------------------------------------
+SETTINGS
+--------------------------------------------*/
 
+#reset-notice {
+	font-size: 34px;
+	color: #676CFB;
+	width: 100%;
+	margin-top: 20px;
+	text-align: center;
+}
+
+
+#settings table {
+	margin: 30px auto;
+	width: 90%;
+	color: #676CFB;
+	font-size: 20px;
+}
+
+#settings td {
+	padding: 15px 0;
+}
+
+#current_pass, #resetpass1, #resetpass2 {
+	height: 32px;
+	width: 165px;
+}
+
+#confirm_reset {
+	background-color: #08AE9E;
+	color: white;
+	height: 46px;
+	width: 200px;
+	font-size: 18.75px;
+	border-radius: 15%;
+	border: none;
+	text-align: center;
+}
