@@ -74,41 +74,41 @@ document.getElementById("check5").innerHTML = fifth_week;*/
 for (i=0; i < first_week.length; i++) {
 	table.rows[1].cells[i].innerHTML = first_week[i];
 	if (first_week[i] === day) {
-		table.rows[1].cells[i].style.backgroundColor = 'yellow';
+		table.rows[1].cells[i].style.backgroundColor = '#e5e500';
 }
 }
 
 for (i=0; i < second_week.length; i++) {
 	table.rows[2].cells[i].innerHTML = second_week[i];
 	if (second_week[i] === day) {
-		table.rows[2].cells[i].style.backgroundColor = 'yellow';
+		table.rows[2].cells[i].style.backgroundColor = '#e5e500';
 }
 }
 
 for (i=0; i < third_week.length; i++) {
 	table.rows[3].cells[i].innerHTML = third_week[i];
 	if (third_week[i] === day) {
-		table.rows[3].cells[i].style.backgroundColor = 'yellow';
+		table.rows[3].cells[i].style.backgroundColor = '#e5e500';
 }
 }
 
 for (i=0; i < fourth_week.length; i++) {
 	table.rows[4].cells[i].innerHTML = fourth_week[i];
 	if (fourth_week[i] === day) {
-		table.rows[4].cells[i].style.backgroundColor = 'yellow';
+		table.rows[4].cells[i].style.backgroundColor = '#e5e500';
 }
 }
 for (i=0; i < fifth_week.length; i++) {
 	table.rows[5].cells[i].innerHTML = fifth_week[i];
 	if (fifth_week[i] === day) {
-		table.rows[5].cells[i].style.backgroundColor = 'yellow';
+		table.rows[5].cells[i].style.backgroundColor = '#e5e500';
 }
 }
 
 for (i=0; i < sixth_week.length; i++) {
 	table.rows[6].cells[i].innerHTML = sixth_week[i];
 	if (fifth_week[i] === day) {
-		table.rows[6].cells[i].style.backgroundColor = 'yellow';
+		table.rows[6].cells[i].style.backgroundColor = '#e5e500';
 }
 }
 
@@ -125,7 +125,7 @@ if (fifth_week.length === 0) {
 /*for (i = 1; i < table.rows.length; i++) {
 	for (j = 0; i < 7; i++) {
 		if (table.rows[i].cells[j].innerHTML.match(24)) {
-			table.rows[i].cells[j].style.color = 'yellow';
+			table.rows[i].cells[j].style.color = '#e5e500';
 		}
 	}
 }*/

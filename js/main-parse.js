@@ -47,7 +47,8 @@ function get_goals() {
 		var cell = row.insertCell();
 		var timeDiff = Math.abs(new Date((goals[i])[2]).getTime() - new Date(today).getTime());
 		var diffDays = Math.round(timeDiff / (1000 * 60 * 60 * 24)); 
-		cell.innerHTML = "<div class='current_goal'>Goal:</br>" + (goals[i])[0] + "</br></br>Cost:</br>$" + (goals[i])[1] + "</br></br>Time Left to Complete Goal:</br>" + diffDays + " days</br></br>Money Saved:</br>$" + Balance +"</br></br>Money Needed:</br>$" + ((goals[i])[1] - Balance).toFixed(2) + "</br></br></div>";
+		var name_of_goal = ((goals[i])[0]).replace(' ','') + "_expand";
+		cell.innerHTML = "<div><div class='clickopen' onclick='expand(this)' id=" + ((goals[i])[0]).replace(' ','') +">" + (goals[i])[0] + "</div><div class='current_goal' style='display:none' id=" + name_of_goal +"></br>Goal:</br>" + (goals[i])[0] + "</br></br>Cost:</br>$" + (goals[i])[1] + "</br></br>Time Left to Complete Goal:</br>" + diffDays + " days</br></br>Money Saved:</br>$" + Balance +"</br></br>Money Needed:</br>$" + ((goals[i])[1] - Balance).toFixed(2) + "</br></br></div></div>";
 		}
 	},
 	error: function(error) {
@@ -57,6 +58,15 @@ function get_goals() {
 	
 }
 
+function expand(thing) {	
+	x = document.getElementById(thing.id + "_expand");
+	if (x.style.display.match("none")) {
+		x.style.display = "block";
+	}
+	else {
+	x.style.display = "none";
+	}
+}
 
 function create_goal() {
 	var goals;
@@ -79,7 +89,8 @@ function create_goal() {
 	success: function(results) {
 		for (var i = 0; i < results.length; i++) {
 			if (results[i].get("username") === email) {
-			object = results[i];}		
+			object = results[i];
+			}		
 		}
 		object.set('goals',goals);
 		object.save(null, {
@@ -102,9 +113,32 @@ function create_goal() {
 	event.preventDefault();
 }
 
-/*WHAT TO WORK ON:
+function updatePassword() {
+	
+	var email = window.localStorage.getItem("User");
 
--NOTIFICATIONS!!!!!!!!!!!!!
--SAVING ALERT SETTINGS INTO PARSE
-
-*/
+	var new_pass_one = document.getElementById("resetpass1").value;
+	var new_pass_two = document.getElementById("resetpass2").value;
+	
+	if (new_pass_one === new_pass_two) {
+	var object;
+	var query = new Parse.Query(UserObject);
+	query.find({
+	success: function(results) {
+		for (var i = 0; i < results.length; i++) {
+			if (results[i].get("username") === email) {
+			object = results[i];}		
+		}
+		object.set('password',new_pass_one);
+		object.save(null, {
+		success: function(object) {
+		alert('Password updated!');
+  }
+});
+	},
+	error: function(error) {
+		alert("Error: " + error.code + " " + error.message);
+	}
+	})
+}
+}

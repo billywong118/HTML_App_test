@@ -59,19 +59,18 @@ function navopen() {
 	var gps = document.getElementById("gps");
 	var settings = document.getElementById("settings");
 	if (home !== null)
-		{home.style.margin = '-419px 0 0 0px';}
+		{home.style.margin = '-323px 0 0 0px';}
 	else if (goals !== null)
-		{goals.style.margin = '-419px 0 0 0px';}
+		{goals.style.margin = '-323px 0 0 0px';}
 	else if (goal_creation !== null)
-		{goal_creation.style.margin = '-419px 0 0 0px';}
+		{goal_creation.style.margin = '-323px 0 0 0px';}
 	else if (alerts !== null)
-		{alerts.style.margin = '-419px 0 0 0px';}
+		{alerts.style.margin = '-323px 0 0 0px';}
 	else if (gps !== null)
-		{gps.style.margin = '-419px 0 0 0px';}
+		{gps.style.margin = '-323px 0 0 0px';}
 	else if (settings !== null)
-		{settings.style.margin = '-419px 0 0 0px';}
+		{settings.style.margin = '-323px 0 0 0px';}
 	
-	/*-80px for each extra thing on nav bar*/
 }
 
 function navclose() {
@@ -116,7 +115,7 @@ function logout()  {
 
 
 
-
+/*---------------------------------------------------------------------------
 function subtractbalance_vtwo() {
 	var amount = document.getElementById("money_to_subtract").value;
 	var balance = document.getElementById("balance");
@@ -128,17 +127,15 @@ function subtractbalance_vtwo() {
 
 
 function updateBalance_versiontwo(amount) {
-	/*have to retrieve the value for respective category then add the value subtracted*/
+	have to retrieve the value for respective category then add the value subtracted
 	var category;
 	var email = window.localStorage.getItem("User");
 	var radios = document.getElementsByName('category');
 
 	for (var i = 0, length = radios.length; i < length; i++) {
 		if (radios[i].checked) {
-			// do whatever you want with the checked radio
+			
 			category = radios[i].value;
-
-			// only one radio can be logically checked, don't check the rest
 			break;
 		}
 	}
@@ -164,3 +161,4 @@ function updateBalance_versiontwo(amount) {
 	}
 	})
 }
+-----------------------------------------------*/
