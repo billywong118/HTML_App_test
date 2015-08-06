@@ -24,5 +24,30 @@ function send_new() {
 	
 	console.log(new_pass);
 	
+	
+	/*var query = new Parse.Query(UserObject);
+	query.equalTo("username", email);
+			query.find({
+			success: function(results) {
+				for (var i = 0; i < results.length; i++) {
+					if (results[i].get("username") === email) {
+					object = results[i];}		
+				}
+				object.set('password',new_pass);
+				object.save(null, {
+				success: function(object) {
+				;
+		}
+		});
+			},
+			error: function(error) {
+				alert("Error: " + error.code + " " + error.message);
+			}
+			})
+			
+			THEN EMAIL THE NEW PASS
+			
+			*/
+	
 	event.preventDefault();
 }
