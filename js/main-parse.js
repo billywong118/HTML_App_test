@@ -48,7 +48,7 @@ function get_goals() {
 		var timeDiff = Math.abs(new Date((goals[i])[2]).getTime() - new Date(today).getTime());
 		var diffDays = Math.round(timeDiff / (1000 * 60 * 60 * 24)); 
 		var name_of_goal = ((goals[i])[0]).replace(' ','') + "_expand";
-		cell.innerHTML = "<div><div class='clickopen' onclick='expand(this)' id=" + ((goals[i])[0]).replace(' ','') +">" + (goals[i])[0] + "</div><div class='current_goal' style='display:none' id=" + name_of_goal +"></br>Goal:</br>" + (goals[i])[0] + "</br></br>Cost:</br>$" + (goals[i])[1] + "</br></br>Time Left to Complete Goal:</br>" + diffDays + " days</br></br>Money Saved:</br>$" + Balance +"</br></br>Money Needed:</br>$" + ((goals[i])[1] - Balance).toFixed(2) + "</br></br></div></div>";
+		cell.innerHTML = "<div><div class='clickopen' onclick='expand(this)' id=" + ((goals[i])[0]).replace(' ','') +">" + (goals[i])[0] + "</div><div class='current_goal' style='display:none' id=" + name_of_goal +">Cost:</br>$" + (goals[i])[1] + "</br></br>Time Left to Complete Goal:</br>" + diffDays + " days</br></br>Money Saved:</br>$" + Balance +"</br></br>Money Needed:</br>$" + ((goals[i])[1] - Balance).toFixed(2) + "</br></div></div>";
 		}
 	},
 	error: function(error) {
