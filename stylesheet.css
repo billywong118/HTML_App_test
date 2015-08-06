@@ -6,11 +6,13 @@ GENERAL
 
 * {
 	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Bangers', cursive;
 	margin: 0;
 }
 
 body {
 	/*background-color: #6DFD6F;*/
+	background-color: #32eaf1;
 }
 
 header {
@@ -57,12 +59,12 @@ input {
 }
 
 #nav button{
-	background-color: #08AE9E;
-	color: white;
+	background-color: #32eaf1;
+	color: #676CFB;
 	height: 46px;
 	width: 77px;
-	font-size: 18.75px;
-	border-radius: 15%;
+	font-size: 25px;;
+	border-radius: none;
 	border: none;
 	
 }
@@ -80,29 +82,33 @@ input {
 	color: blue;
 }
 
+#nav-bar table {
+	border: 1px solid black;
+}
+
 #nav-bar  table, #nav-bar td{
-	margin-top: -70px;
+	margin-top: -67.5px/*-70px*/;
 	margin-left: 40px;
 	margin-left: 0px;
-	background-color: white;
+	background-color: #2dd2d8;
+	color: #676CFB;
 	position: relative;
-	z-index: 5;
-	border: 1px solid grey;
-	
+	z-index: 5;	
 }
 
 #nav-bar table td {
 	padding: 7.5px;
 }
 
+
 #nav-bar button {
-	background-color: #08AE9E;
+	background-color: #98ff98;
 	width: 130px;
 	height: 46px;
-	color: white;
-	font-size: 18.75px;
+	color: #676CFB;
+	font-size: 25px;
 	border-radius: 15%;
-	border: none;
+	border: 1px solid green;
 }
 
 /*-----------------------------
@@ -123,10 +129,15 @@ WELCOME
 #options {
 	font-size: 27.5px;
 	margin-top: 98px/*30.625%*/;
+	color: #676CFB;
 }
 
 #options  a {
 	text-decoration: none;
+}
+
+#options a:hover {
+	color: #98ff98;
 }
 
 /*-----------------------------
@@ -325,7 +336,7 @@ HOME
 
 #home table {
 	width: 90%;
-	margin: 40px 0 0 5%;
+	margin: 40px 0 0 15%;
 	text-align: center;
 }
 
@@ -346,7 +357,7 @@ HOME
 
 #balance {
 	font-size: 45px;
-	color: red;
+	color: green;
 	text-align: center;
 	/*MAKE SURE BALANCE DOES NOT FLOW TOO MUCH TO THE RIGHT*/
 }
@@ -355,11 +366,11 @@ HOME
 	height: 80px;
 	width: 80px;
 	border-radius: 100%;
-	background-color: #08AE9E;
-	color: white;
+	background-color: #98ff98;
+	color: #676CFB;
 	font-size: 80px;
 	font-weight: bold;
-	border: none;
+	border: 1px solid green;
 	line-height: 80px;
 }
 
@@ -398,17 +409,17 @@ GOALS
 #create-goal {
 	width: 90%;
 	height: 45px;
-	border: 1px solid #c00;
+	border: 1px solid green;
 	border-radius: 15%;
-	background-color: red;
-	font-size: 18.75px;
-	color: white;
+	background-color: #98ff98;
+	font-size: 25px;
+	color: #676CFB;
 	margin: 10px 5% 25px 5%;
 }
 
 #month {
-	font-size: 20px;
-	font-weight: bold;
+	font-size: 25px;
+	color: #676CFB;
 }
 
 #calendar {
@@ -421,9 +432,9 @@ GOALS
 }
 
 #calendar td {
-	background-color: violet;
+	background-color: #98ff98;
 	font-size: 20px;
-	color: white;
+	color: #676CFB;
 	width: 30px;
 	height: 30px;
 }
@@ -442,9 +453,9 @@ GOALS
 
 .clickopen {
 	text-align: center;
-	border: 1px #dadada outset;
-	background-color: #e6e6e6;
-	color: #651BD2;
+	border: 1px outset green;
+	background-color: #98ff98;
+	color: #676CFB;
 	font-size: 23px;
 	width: 95%;
 	padding: 2.5%;
@@ -453,11 +464,11 @@ GOALS
 .current_goal {
 	width: 95%;
 	text-align: left;
-	background-color: #0ff;
-	color: #651BD2;
+	background-color: #b5f6f9;
+	color: #676CFB;
 	font-size: 22px;
 	margin: 0 auto auto 0;
-	border: 1px solid #dadada;
+	border: 1px outset green;
 	padding: 2.5%;
 }
 

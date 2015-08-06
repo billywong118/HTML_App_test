@@ -6,7 +6,8 @@ function addbalance() {
 	var balance = document.getElementById("balance");
 	var next_balance = ( Number(balance.innerHTML.substring(1)) + Number(amount) ).toFixed(2);
 	balance.innerHTML = '$' + next_balance.toString();
-	updateBalance();
+	console.log(amount);
+	if (amount != null) {updateBalance()};
 }
 
 
@@ -18,7 +19,7 @@ function subtractbalance() {
 	var balance = document.getElementById("balance");
 	var next_balance = ( Number(balance.innerHTML.substring(1)) - Number(amount) ).toFixed(2);
 	balance.innerHTML = '$' + next_balance.toString();
-	updateBalance();
+	if (amount != null) {updateBalance()};
 }
 
 /*work on where the negative sign is */
@@ -59,21 +60,22 @@ function navopen() {
 	var gps = document.getElementById("gps");
 	var settings = document.getElementById("settings");
 	document.getElementById("nav-open").style.display = "none";
-	document.getElementById("header").style.marginLeft = '160px';
+	//document.getElementById("header").style.marginLeft = '160px';
 	if (home !== null)
-		{home.style.margin = '-323px 0 0 160px';}
+		{home.style.margin = '-318px 0 0 0px';}
 	else if (goals !== null)
-		{goals.style.margin = '-323px 0 0 160px';}
+		{goals.style.margin = '-318px 0 0 0px';}
 	else if (goal_creation !== null)
-		{goal_creation.style.margin = '-323px 0 0 160px';}
+		{goal_creation.style.margin = '-318px 0 0 0px';}
 	else if (alerts !== null)
-		{alerts.style.margin = '-323px 0 0 160px';}
+		{alerts.style.margin = '-318px 0 0 0px';}
 	else if (gps !== null)
-		{gps.style.margin = '-323px 0 0 160px';}
+		{gps.style.margin = '-318px 0 0 0px';}
 	else if (settings !== null)
-		{settings.style.margin = '-323px 0 0 160px';}
+		{settings.style.margin = '-318px 0 0 0px';}
 	
 }
+//-323 with shift to right
 
 function navclose() {
 	var navvy = document.getElementById("nav-bar");
@@ -84,8 +86,8 @@ function navclose() {
 	var alerts = document.getElementById("alerts");
 	var gps = document.getElementById("gps");
 	var settings = document.getElementById("settings");
-	document.getElementById("nav-open").style.display = "block";
-	document.getElementById("header").style.marginLeft = '0px';
+	document.getElementById("nav-open").style.display = "";
+	//document.getElementById("header").style.marginLeft = '0px';
 	if (home !== null)
 		{home.style.margin = '0 0 0 0';}
 	else if (goals !== null)

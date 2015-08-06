@@ -145,6 +145,7 @@ function updatePassword() {
 				object.save(null, {
 				success: function(object) {
 				alert('Password updated!');
+				window.location.href = "settings.html";
 		}
 		});
 			},
