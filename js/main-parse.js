@@ -117,28 +117,63 @@ function updatePassword() {
 	
 	var email = window.localStorage.getItem("User");
 
+	var current_pass = document.getElementById("current_pass").value;
 	var new_pass_one = document.getElementById("resetpass1").value;
 	var new_pass_two = document.getElementById("resetpass2").value;
+	var password;
+	var correct = false;
 	
-	if (new_pass_one === new_pass_two) {
-	var object;
 	var query = new Parse.Query(UserObject);
+	query.equalTo("username", email);
 	query.find({
 	success: function(results) {
-		for (var i = 0; i < results.length; i++) {
-			if (results[i].get("username") === email) {
-			object = results[i];}		
+		if (results.length >= 1) {
+			for (var i = 0; i < results.length; i++) {
+			password = results[i].get("password");
+			if (password === current_pass) {
+				correct = true;
+			};
+		if (correct && new_pass_one === new_pass_two && password !== new_pass_one) {
+			var object;
+			query.find({
+			success: function(results) {
+				for (var i = 0; i < results.length; i++) {
+					if (results[i].get("username") === email) {
+					object = results[i];}		
+				}
+				object.set('password',new_pass_one);
+				object.save(null, {
+				success: function(object) {
+				alert('Password updated!');
 		}
-		object.set('password',new_pass_one);
-		object.save(null, {
-		success: function(object) {
-		alert('Password updated!');
+		});
+			},
+			error: function(error) {
+				alert("Error: " + error.code + " " + error.message);
+			}
+			})
+		}
+		else if (new_pass_one !== new_pass_two) {
+			alert("The two passwords did not match. Please check and re-enter them.")
+		}
+		else if (password !== current_pass){
+			alert("The current password you entered is not correct. Please try again");
+			window.location.href = "settings.html";
+		}
+		else if (password === new_pass_one) {
+			alert("The new password you entered is the current one. Please enter a new password!");
+			window.location.href = "settings.html";
+		}
+		else {
+			alert("Oh no! The app has malfunctioned!")
+		}
+		event.preventDefault();	
+				}
+			}
+		},
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
   }
 });
-	},
-	error: function(error) {
-		alert("Error: " + error.code + " " + error.message);
-	}
-	})
-}
+	
 }
