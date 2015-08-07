@@ -48,7 +48,7 @@ function get_goals() {
 		var timeDiff = Math.abs(new Date((goals[i])[2]).getTime() - new Date(today).getTime());
 		var diffDays = Math.round(timeDiff / (1000 * 60 * 60 * 24)); 
 		var name_of_goal = ((goals[i])[0]).replace(' ','') + "_expand";
-		cell.innerHTML = "<div><div class='clickopen' onclick='expand(this)' id=" + ((goals[i])[0]).replace(' ','') +">" + (goals[i])[0] + "</div><div class='current_goal' style='display:none' id=" + name_of_goal +">Cost:</br>$" + (goals[i])[1] + "</br></br>Time Left to Complete Goal:</br>" + diffDays + " days</br></br>Money Saved:</br>$" + Balance +"</br></br>Money Needed:</br>$" + ((goals[i])[1] - Balance).toFixed(2) + "</br></div></div>";
+		cell.innerHTML = "<div><div class='clickopen' onclick='expand(this)' id=" + ((goals[i])[0]).replace(' ','') +">" + (goals[i])[0] + "</div><div class='current_goal' style='display:none' id=" + name_of_goal +">Cost:</br>$" + (goals[i])[1] + "</br></br>Time Left to Complete Goal:</br>" + diffDays + " days</br></br>Money Saved:</br>$" + Balance +"</br></br>Money Needed:</br><div class='money_need'>$" + ((goals[i])[1] - Balance).toFixed(2) + "</div></br></div></div>";
 		}
 	},
 	error: function(error) {
@@ -65,6 +65,14 @@ function expand(thing) {
 	}
 	else {
 	x.style.display = "none";
+	}
+}
+
+function checkdone() {
+	var money_need = document.getElementsByClassName("money_need");
+	console.log(Number(money_need.innerHTML.substring(1)));
+	if (Number(money_need.innerHTML.substring(1)) <= 0) {
+		money_need.innerHTML = 'DONE!';
 	}
 }
 
