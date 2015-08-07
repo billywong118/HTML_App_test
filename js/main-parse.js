@@ -47,8 +47,9 @@ function get_goals() {
 		var cell = row.insertCell();
 		var timeDiff = Math.abs(new Date((goals[i])[2]).getTime() - new Date(today).getTime());
 		var diffDays = Math.round(timeDiff / (1000 * 60 * 60 * 24)); 
-		var name_of_goal = ((goals[i])[0]).replace(' ','') + "_expand";
-		cell.innerHTML = "<div><div class='clickopen' onclick='expand(this)' id=" + ((goals[i])[0]).replace(' ','') +">" + (goals[i])[0] + "</div><div class='current_goal' id=" + name_of_goal +">Cost:</br>$" + (goals[i])[1] + "</br></br>Time Left to Complete Goal:</br>" + diffDays + " days</br></br>Money Saved:</br>$" + Balance +"</br></br>Money Needed:</br><div class='money_need'>$" + ((goals[i])[1] - Balance).toFixed(2) + "</div></br></div></div>";
+		var name_of_goal = ((goals[i])[0]).replace(' ','--') + "_expand";
+		var delbutton_name = ((goals[i])[0]).replace(' ','--') + "_delete";
+		cell.innerHTML = "<div><div class='clickopen' onclick='expand(this)' id=" + ((goals[i])[0]).replace(' ','--') +">" + (goals[i])[0] + "</div><div class='delete_button'><button type='button' onclick='delete_goal(this)' id=" + delbutton_name + ">DELETE</button></div><div class='current_goal' id=" + name_of_goal +">Cost:</br>$" + (goals[i])[1] + "</br></br>Time Left to Complete Goal:</br>" + diffDays + " days</br></br>Money Saved:</br>$" + Balance +"</br></br>Money Needed:</br><div class='money_need'>$" + ((goals[i])[1] - Balance).toFixed(2) + "</div></br></div></div>";
 		}
 		checkdone();
 	},
@@ -77,12 +78,63 @@ function checkdone() {
 			money_need[i].style.color = "red";
 		}
 	}
-	//console.log(Number(money_need.innerHTML.substring(1)));
-	/*for (var i = 0; i < money_need.length; i++) {
-	if (Number(money_need[i].innerHTML.substring(1)) <= 0) {
-		money_need.innerHTML = 'DONE!';
-	}
+}
+
+function delete_goal(to_del) {
+	var goals;
+	var del_or_no = confirm("Would you like to delete this goal? This goal cannot be recovered once it is deleted.");
+	
+	/*var del_or_no = prompt ("Would you like to delete this goal? This goal cannot be recovered once it is deleted. Please enter 'Yes or 'No'").toUpperCase();
+	while (del_or_no !== 'YES' && del_or_no !== 'NO') {
+		var del_or_no = prompt ("Please enter 'Yes or 'No'").toUpperCase();
 	}*/
+	
+	var goal_to_del = to_del.id.substring( 0, to_del.id.indexOf( "_" ) );;
+	
+	if (del_or_no) {
+	var query = new Parse.Query(UserObject);
+	query.select('username','goals');
+	query.find({
+	success: function(results) {
+		for (var i = 0; i < results.length; i++) {
+			if (results[i].get("username") === email) {
+			goals = results[i].get("goals");
+			}
+		};
+		
+		for (var i = 0; i < goals.length; i++) {
+			if ((goals[i])[0].replace(' ','--') === goal_to_del) {
+				goals.splice(i, 1);
+				i -= 1;
+			}
+		};
+				
+		query.find({
+	success: function(results) {
+		for (var i = 0; i < results.length; i++) {
+			if (results[i].get("username") === email) {
+			object = results[i];
+			}		
+		}
+		object.set('goals',goals);
+		object.save(null, {
+		success: function(object) {
+		alert('Goal deleted!');
+		window.location.href = "goals.html";
+  }
+});
+	},
+	error: function(error) {
+		alert("Error: " + error.code + " " + error.message);
+	}
+	})
+	
+	},
+	error: function(error) {
+		alert("Error: " + error.code + " " + error.message);
+	}
+	});}
+	event.preventDefault();
 }
 
 function create_goal() {
@@ -129,6 +181,7 @@ function create_goal() {
 	});
 	event.preventDefault();
 }
+
 
 function updatePassword() {
 	
@@ -194,4 +247,127 @@ function updatePassword() {
   }
 });
 	
+}
+
+
+function updateAlerts() {
+	
+	var alerts;
+	
+	var switcher = document.getElementById("myonoffswitch");
+	var goal_status = document.getElementById("goals-status");
+	var checkin_status = document.getElementById("checkin-status");	
+	
+	var query = new Parse.Query(UserObject);
+	query.select('username','alerts');
+	query.find({
+	success: function(results) {
+		for (var i = 0; i < results.length; i++) {
+			if (results[i].get("username") === email) {
+			alerts = results[i].get("alerts");
+			}
+		};
+				
+		if (switcher.checked) {
+			alerts[0] = "Y";
+		}
+		else {
+			alerts[0] = "N";
+		}
+		
+		
+		if (goal_status.checked) {
+			alerts[1] = "Y";
+		}
+		else {
+			alerts[1] = "N";
+		}
+		
+		if (checkin_status.checked) {
+			alerts[2] = "Y";
+		}
+		else {
+			alerts[2] = "N";
+		}
+		
+		console.log(alerts);
+			
+		query.find({
+	success: function(results) {
+		for (var i = 0; i < results.length; i++) {
+			if (results[i].get("username") === email) {
+			object = results[i];
+			}		
+		}
+		object.set('alerts',alerts);
+		object.save(null, {
+		success: function(object) {
+			//
+  }
+});
+	},
+	error: function(error) {
+		alert("Error: " + error.code + " " + error.message);
+	}
+	})
+	
+	},
+	error: function(error) {
+		alert("Error: " + error.code + " " + error.message);
+	}
+	});
+	event.preventDefault();
+}
+
+
+function get_alerts () {
+	
+	var alerts;
+	
+	var switcher = document.getElementById("myonoffswitch");
+	var goal_status = document.getElementById("goals-status");
+	var checkin_status = document.getElementById("checkin-status");	
+	
+	var query = new Parse.Query(UserObject);
+	query.select('username','alerts');
+	query.find({
+	success: function(results) {
+		for (var i = 0; i < results.length; i++) {
+			if (results[i].get("username") === email) {
+			alerts = results[i].get("alerts");
+			}
+		};
+		
+		console.log(alerts);
+		
+		
+		if (alerts[0] === "Y") {
+			switcher.checked = true;
+		}
+		else {
+			switcher.checked = false;
+			document.getElementById("alert-options").style.display = 'none';
+		}
+		
+		
+		if (alerts[1] === "Y") {
+			goal_status.checked = true
+		}
+		else {
+			goal_status.checked = false
+		}
+		
+		
+		if (alerts[2] === "Y") {
+			checkin_status.checked = true
+		}
+		else {
+			checkin_status.checked = false
+		}
+		
+	},
+	error: function(error) {
+		alert("Error: " + error.code + " " + error.message);
+	}
+	});
 }

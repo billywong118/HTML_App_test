@@ -336,8 +336,8 @@ HOME
 }
 
 #home table {
-	width: 90%;
-	margin: 40px 0 0 15%;
+	width: 95%;
+	margin: 40px 0 0 5%;
 	text-align: center;
 }
 
@@ -455,15 +455,38 @@ GOALS
 .clickopen {
 	text-align: center;
 	border: 3px outset #79cc79;
+	border-right: none;
 	background-color: #98ff98;
 	color: #676CFB;
 	font-size: 23px;
-	width: 94.75%;
+	width: 73%;
 	padding: 2.5%;
+	display: inline-block;
+}
+
+.delete_button {
+	text-align: center;
+	border: 3px outset #79cc79;
+	border-left: none;
+	background-color: #98ff98;
+	color: #676CFB;
+	font-size: 23px;
+	width: 20%;
+	display: inline-block;
+	height: 24px;
+	padding: 2.5% 0;
+}
+
+.delete_button button {
+	color: #79cc79;
+	background-color: #676CFB;
+	height: 30px;
+	width: 50px;
+	font-size: 16px;
 }
 
 .current_goal {
-	width: 95%;
+	width: 93.7%;
 	text-align: left;
 	background-color: #b5f6f9;
 	color: #676CFB;
@@ -574,8 +597,7 @@ ALERTS
 }
 
 #alert-options {
-	margin: 30px 0 0 7.5%;
-	width: 85%;
+	margin: 30px 7.5% 0 7.5%;
 }
 
 #alert-options td {

@@ -46,6 +46,7 @@ userObject.set("username", email);
 userObject.set("password", password);
 userObject.set("balance", 0);
 userObject.set("goals", []);
+userObject.set("alerts", ["Y","N","N"]);
 
 userObject.save(null, {
   success: function(userObject) {

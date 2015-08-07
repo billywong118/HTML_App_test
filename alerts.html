@@ -7,7 +7,7 @@
 <title>Alerts</title>
 </head>
 
-<body>
+<body onload="get_alerts()">
 <header id="header">
 
 <table width="100%">
@@ -52,7 +52,7 @@
 <td width="230px">Alerts</td>
 <td>
 <div class="onoffswitch">
-    <input type="checkbox" onclick="alert_status()" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+    <input type="checkbox" onclick="alert_status()" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" onchange="updateAlerts()" checked>
     <label class="onoffswitch-label" for="myonoffswitch">
         <span class="onoffswitch-inner"></span>
         <span class="onoffswitch-switch"></span>
@@ -66,16 +66,12 @@
 
 <tr>
 <td>Goals Alert</td>
-<td><input type="checkbox" name="goals-status"></td>
+<td width="10%"><input type="checkbox" id="goals-status" onchange="updateAlerts()"></td>
 </tr>
 <tr>
 <td>Daily Check-In Alert</td>
-<td><input type="checkbox" name="checkin-status"></td>
+<td width="10%"><input type="checkbox" id="checkin-status" onchange="updateAlerts()"></td>
 </tr>
-<!--<tr>
-<td>GPS Alert</td>
-<td><input type="checkbox" name="gps-status"></td>
-</tr>-->
 
 </table>
 
