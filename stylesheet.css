@@ -109,7 +109,7 @@ input {
 	color: #676CFB;
 	font-size: 25px;
 	border-radius: 15%;
-	border: 1px solid green;
+	border: 1px outset #79cc79;
 }
 
 /*-----------------------------
@@ -371,7 +371,7 @@ HOME
 	color: #676CFB;
 	font-size: 80px;
 	font-weight: bold;
-	border: 1px solid green;
+	border: 1px solid #79cc79;
 	line-height: 80px;
 }
 
@@ -383,7 +383,7 @@ HOME
 	font-size: 22.5px;
 	color: #676CFB;
 	text-align: center;
-	padding-top: 5px;
+	padding: 5px 5% 0 5%;
 }
 
 #moneyMinus {
@@ -408,18 +408,18 @@ GOALS
 
 
 #create-goal {
-	width: 90%;
+	width: 70%;
 	height: 45px;
-	border: 1px solid green;
+	border: 3px outset #79cc79;
 	border-radius: 15%;
 	background-color: #98ff98;
-	font-size: 25px;
+	font-size: 30px;
 	color: #676CFB;
-	margin: 10px 5% 25px 5%;
+	margin: 10px 15% 25px 15%;
 }
 
 #month {
-	font-size: 25px;
+	font-size: 36px;
 	color: #676CFB;
 }
 
@@ -434,7 +434,7 @@ GOALS
 
 #calendar td {
 	background-color: #98ff98;
-	font-size: 20px;
+	font-size: 25px;
 	color: #676CFB;
 	width: 30px;
 	height: 30px;
@@ -447,18 +447,18 @@ GOALS
 
 #current-goals_label{
 	text-align: center;
-	margin: auto;
+	margin: 15px auto 0 auto;
 	color: green;
 	font-size: 40px;
 }
 
 .clickopen {
 	text-align: center;
-	border: 1px outset green;
+	border: 3px outset #79cc79;
 	background-color: #98ff98;
 	color: #676CFB;
 	font-size: 23px;
-	width: 95%;
+	width: 94.75%;
 	padding: 2.5%;
 }
 
@@ -469,8 +469,9 @@ GOALS
 	color: #676CFB;
 	font-size: 22px;
 	margin: 0 auto auto 0;
-	border: 1px outset green;
+	border: 2px outset #79cc79;
 	padding: 2.5%;
+	display: none;
 }
 
 /*-------------------------------------

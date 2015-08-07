@@ -61,18 +61,19 @@ function navopen() {
 	var settings = document.getElementById("settings");
 	document.getElementById("nav-open").style.display = "none";
 	//document.getElementById("header").style.marginLeft = '160px';
+	document.getElementById("header").style.marginTop = '1px';
 	if (home !== null)
-		{home.style.margin = '-318px 0 0 0px';}
+		{home.style.margin = '-319px 0 0 0px';}
 	else if (goals !== null)
-		{goals.style.margin = '-318px 0 0 0px';}
+		{goals.style.margin = '-319px 0 0 0px';}
 	else if (goal_creation !== null)
-		{goal_creation.style.margin = '-318px 0 0 0px';}
+		{goal_creation.style.margin = '-319px 0 0 0px';}
 	else if (alerts !== null)
-		{alerts.style.margin = '-318px 0 0 0px';}
+		{alerts.style.margin = '-319px 0 0 0px';}
 	else if (gps !== null)
-		{gps.style.margin = '-318px 0 0 0px';}
+		{gps.style.margin = '-319px 0 0 0px';}
 	else if (settings !== null)
-		{settings.style.margin = '-318px 0 0 0px';}
+		{settings.style.margin = '-319px 0 0 0px';}
 	
 }
 //-323 with shift to right
@@ -88,6 +89,7 @@ function navclose() {
 	var settings = document.getElementById("settings");
 	document.getElementById("nav-open").style.display = "";
 	//document.getElementById("header").style.marginLeft = '0px';
+	document.getElementById("header").style.marginTop = '0px';
 	if (home !== null)
 		{home.style.margin = '0 0 0 0';}
 	else if (goals !== null)
