@@ -5,8 +5,8 @@ GENERAL
 /*width of screen is 356px*/
 
 * {
-	font-family: 'Ubuntu', sans-serif;
-	font-family: 'Bangers', cursive;
+	font-family: 'Lobster', cursive;
+	/*font-family: 'Bangers', cursive;*/
 	margin: 0;
 }
 
@@ -473,7 +473,7 @@ GOALS
 	font-size: 23px;
 	width: 20%;
 	display: inline-block;
-	height: 24px;
+	height: 29px /*24px for bangers*/;
 	padding: 2.5% 0;
 }
 
@@ -481,8 +481,8 @@ GOALS
 	color: #79cc79;
 	background-color: #676CFB;
 	height: 30px;
-	width: 50px;
-	font-size: 16px;
+	width: 55px /*50px for Bangers*/;
+	font-size: 14px/*16px for Bangers*/;
 }
 
 .current_goal {
@@ -514,7 +514,7 @@ CREATE GOALS-
 }
 
 #goal-creation table {
-	margin: 30px 0 0 15%;
+	margin: 10px 0 0 15%;
 }
 
 #goal-creation td {
