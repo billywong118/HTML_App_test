@@ -13,6 +13,7 @@ GENERAL
 body {
 	/*background-color: #6DFD6F;*/
 	background-color: #32eaf1;
+	overflow: auto/*scroll*/;
 }
 
 header {
