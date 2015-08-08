@@ -5,7 +5,7 @@ GENERAL
 /*width of screen is 356px*/
 
 * {
-	font-family: 'Lobster', cursive;
+	/*font-family: 'Lobster', cursive;*/
 	/*font-family: 'Bangers', cursive;*/
 	margin: 0;
 }
@@ -26,12 +26,23 @@ header p {
 	color: #676CFB;
 	font-size: 45px;
 	font-weight: bold;
+	font-family: 'Lobster', cursive;
 }
 
-header img {
+#logo img {
 	height: 50px;
 	margin-right: 10px;
 	margin-top: 10px;
+}
+
+#nav-open img {
+	height: 40px;
+	margin-right: 10px;
+	margin-top: 4px;
+}
+
+#nav-bar button {
+	font-family: 'Bangers', cursive;
 }
 
 #logo {
@@ -57,6 +68,7 @@ a:hover {
 input {
 	background-color: white;
 	font-size: 100%;
+	font-family: 'Lobster', cursive;
 }
 
 #nav button{
@@ -118,6 +130,7 @@ WELCOME
 
 #welcome {
 	text-align: center;
+	font-family: 'Lobster', cursive;
 }
 
 #hello {
@@ -149,6 +162,7 @@ SIGN UP
 	font-size: 25px;
 	color: #676CFB;
 	margin-left: 13px;
+	font-family: 'Lobster', cursive;
 }
 
 #signup input {
@@ -261,6 +275,7 @@ LOGIN
 	margin-left: 10%;
 	color: #676CFB;
 	font-size: 30px;
+	font-family: 'Lobster', cursive;
 }
 
 #login-id {
@@ -300,6 +315,7 @@ FORGOT PASSWORD
 	margin-left: 10%;
 	color: #676CFB;
 	font-size: 30px;
+	font-family: 'Lobster', cursive;
 }
 
 #forgot input {
@@ -333,6 +349,7 @@ HOME
 	position: fixed;
 	z-index: 1;
 	display: inline-block;
+	font-family: 'Lobster', cursive;
 }
 
 #home table {
@@ -404,6 +421,7 @@ GOALS
 
 #goals {
 	margin: 0px 0 0 0;
+	font-family: 'Lobster', cursive;
 }
 
 
@@ -416,6 +434,7 @@ GOALS
 	font-size: 30px;
 	color: #676CFB;
 	margin: 10px 15% 25px 15%;
+	font-family: 'Bangers', cursive;
 }
 
 #month {
@@ -483,6 +502,7 @@ GOALS
 	height: 30px;
 	width: 55px /*50px for Bangers*/;
 	font-size: 14px/*16px for Bangers*/;
+	font-family: 'Lobster', cursive;
 }
 
 .current_goal {
@@ -500,6 +520,10 @@ GOALS
 /*-------------------------------------
 CREATE GOALS-
 ---------------------------------------*/
+
+#goal-creation, #goal-creation input {
+	font-family: 'Lobster', cursive;
+}
 
 #goal_notice {
 	font-size: 20px;
@@ -547,6 +571,10 @@ CREATE GOALS-
 GPS
 -------------------------------*/
 
+#gps {
+	font-family: 'Lobster', cursive;
+}
+
 #map-canvas {
 	height: 80%;
 	width: 80%;
@@ -584,6 +612,7 @@ ALERTS
 #alerts {
 	font-size: 30px;
 	color: #676CFB;
+	font-family: 'Lobster', cursive;
 }
 
 #alert-head{
@@ -657,6 +686,10 @@ ALERTS
 SETTINGS
 --------------------------------------------*/
 
+#settings {
+	font-family: 'Lobster', cursive;
+}
+
 #reset-notice {
 	font-size: 34px;
 	color: #676CFB;
@@ -691,4 +724,5 @@ SETTINGS
 	border-radius: 15%;
 	border: none;
 	text-align: center;
+	font-family: 'Lobster', cursive;
 }
