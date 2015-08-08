@@ -620,17 +620,19 @@ ALERTS
 	width: 85%;
 }
 
-#goals-status, #checkin-status {
-	width: 27px;
-	height: 27px;
-}
-
 #alert-options {
 	margin: 30px 7.5% 0 7.5%;
 }
 
 #alert-options td {
 	padding: 10px 10px 10px 0;
+}
+
+#goals-status, #checkin-status {
+	width: 27px;
+	height: 27px;
+	-webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+	position: relative;
 }
 
 	/*SWITCH BUTTON*/
