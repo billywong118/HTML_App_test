@@ -354,7 +354,7 @@ HOME
 
 #home table {
 	width: 275px;
-	margin: 40px 10%;
+	margin: 20px 10%;
 	text-align: center;
 }
 
@@ -370,7 +370,7 @@ HOME
 	font-size: 45px;
 	color: #676CFB;
 	text-align: center;
-	padding-top: 22px;
+	padding-top: 20px;
 }
 
 #balance {
@@ -393,7 +393,7 @@ HOME
 }
 
 .balance-button {
-	padding-top: 40px;
+	padding-top: 20px;
 }
 
 .change-balance {
@@ -620,7 +620,7 @@ ALERTS
 	width: 85%;
 }
 
-#alerts input {
+#goals-status, #checkin-status {
 	width: 27px;
 	height: 27px;
 }
@@ -630,7 +630,7 @@ ALERTS
 }
 
 #alert-options td {
-	padding: 10px 0;
+	padding: 10px 10px 10px 0;
 }
 
 	/*SWITCH BUTTON*/

@@ -139,6 +139,7 @@ function delete_goal(to_del) {
 
 function create_goal() {
 	var goals;
+	var exist = false;
 	var goal_name = document.getElementById("goal_name").value;
 	var goal_cost = document.getElementById("goal_cost").value;
 	var goal_date = document.getElementById("goal_date").value;
@@ -151,7 +152,14 @@ function create_goal() {
 			goals = results[i].get("goals");
 			}
 		}
-		
+	
+	for (var i = 0; i < goals.length; i++) {
+		if ((goals[i])[0] === goal_name) {
+			exist = true;
+		}
+	}
+				
+		if (!exist && (goal_name.length !== 0 && goal_cost.length !== 0 && goal_date.length !== 0)) {
 		goals.unshift([goal_name, goal_cost, goal_date]);
 		
 		query.find({
@@ -173,6 +181,13 @@ function create_goal() {
 		alert("Error: " + error.code + " " + error.message);
 	}
 	})
+		}
+	else if (goal_name.length == 0 || goal_cost.length == 0 || goal_date.length == 0) {
+		alert("Please make sure all of the fields are filled!")
+	}
+	else {
+		alert("Please use another name! The selected name has already been used for one of your goals.");
+	}
 	
 	},
 	error: function(error) {
