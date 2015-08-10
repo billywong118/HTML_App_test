@@ -29,6 +29,7 @@ header p {
 	font-family: 'Lobster', cursive;
 }
 
+
 #logo img {
 	height: 50px;
 	margin-right: 10px;
@@ -538,7 +539,7 @@ CREATE GOALS-
 }
 
 #goal-creation table {
-	margin: 10px 0 0 15%;
+	margin: 10px 0 0 20%;
 }
 
 #goal-creation td {
