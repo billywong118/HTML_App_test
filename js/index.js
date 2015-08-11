@@ -1,4 +1,4 @@
-Skip to content
+/*Skip to content
 This repository  
 Pull requests
 Issues
@@ -11,7 +11,7 @@ hollyschinsky/PushNotificationSampleApp
 Branch: master  PushNotificationSampleApp/www/js/index.js
 @hollyschinskyhollyschinsky on Jul 16, 2013 Added iOS handling.
 1 contributor
-RawBlameHistory     106 lines (99 sloc)  3.993 kB
+RawBlameHistory     106 lines (99 sloc)  3.993 kB*/
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -117,5 +117,5 @@ var app = {
         }
     }
 };
-Status API Training Shop Blog About Help
-© 2015 GitHub, Inc. Terms Privacy Security Contact
+/*Status API Training Shop Blog About Help
+© 2015 GitHub, Inc. Terms Privacy Security Contact*/
