@@ -13,6 +13,10 @@
     </author>
 
     <preference name="permissions" value="none"/>
+	
+	<gap:plugin name="com.adobe.plugins.pushplugin" />
+	<gap:plugin name="com.phonegap.plugins.pushplugin" version="2.4.0" />
+	<gap:plugin name="com.phonegap.plugins.PushPlugin=https://github.com/phonegap-build/PushPlugin#sthash.O0E59q9b.dpuf" />
 
 	<icon src="logo.png" />
     <feature name="http://api.phonegap.com/1.0/battery"/>
@@ -42,6 +46,12 @@
 		<param name="android-package" value="org.apache.cordova.vibration.Vibration" />
 	</feature>
 	
+</widget>
+
+<widget id="com.example.pushnotification" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+
+    <access origin="http://127.0.0.1*" />
+
 </widget>
 
 
