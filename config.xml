@@ -15,7 +15,6 @@
     <preference name="permissions" value="none"/>
 	
 	<gap:plugin name="com.phonegap.plugins.pushplugin" version="2.4.0" />
-	<gap:plugin name="com.phonegap.plugins.PushPlugin=https://github.com/phonegap-build/PushPlugin#sthash.O0E59q9b.dpuf" />
 
 	<icon src="logo.png" />
     <feature name="http://api.phonegap.com/1.0/battery"/>
