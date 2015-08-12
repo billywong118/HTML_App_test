@@ -63,17 +63,17 @@ function navopen() {
 	//document.getElementById("header").style.marginLeft = '160px';
 	document.getElementById("header").style.marginTop = '0px';
 	if (home !== null)
-		{home.style.margin = '-314px 0 0 0px';}
+		{home.style.margin = '-315px 0 0 0px';}
 	else if (goals !== null)
-		{goals.style.margin = '-314px 0 0 0px';}
+		{goals.style.margin = '-315px 0 0 0px';}
 	else if (goal_creation !== null)
-		{goal_creation.style.margin = '-314px 0 0 0px';}
+		{goal_creation.style.margin = '-315px 0 0 0px';}
 	else if (alerts !== null)
-		{alerts.style.margin = '-314px 0 0 0px';}
+		{alerts.style.margin = '-315px 0 0 0px';}
 	else if (gps !== null)
-		{gps.style.margin = '-314px 0 0 0px';}
+		{gps.style.margin = '-315px 0 0 0px';}
 	else if (settings !== null)
-		{settings.style.margin = '-314px 0 0 0px';}
+		{settings.style.margin = '-315px 0 0 0px';}
 	
 }
 

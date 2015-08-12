@@ -49,7 +49,7 @@ function get_goals() {
 		var diffDays = Math.round(timeDiff / (1000 * 60 * 60 * 24)); 
 		var name_of_goal = ((goals[i])[0]).replace(' ','--') + "_expand";
 		var delbutton_name = ((goals[i])[0]).replace(' ','--') + "_delete";
-		cell.innerHTML = "<div><div class='clickopen' onclick='expand(this)' id=" + ((goals[i])[0]).replace(' ','--') +">" + (goals[i])[0] + "</div><div class='delete_button'><button type='button' onclick='delete_goal(this)' id=" + delbutton_name + ">DELETE</button></div><div class='current_goal' id=" + name_of_goal +">Cost:</br>$" + (goals[i])[1] + "</br></br>Time Left to Complete Goal:</br>" + diffDays + " days</br></br>Money Saved:</br>$" + Balance +"</br></br>Money Needed:</br><div class='money_need'>$" + ((goals[i])[1] - Balance).toFixed(2) + "</div></br></div></div>";
+		cell.innerHTML = "<div><div class='clickopen' onclick='expand(this)' id=" + ((goals[i])[0]).replace(' ','--') +">" + (goals[i])[0] + "</div><div class='delete_button'><button type='button' onclick='delete_goal(this)' id=" + delbutton_name + ">X</button></div><div class='current_goal' id=" + name_of_goal +">Cost:</br>$" + (goals[i])[1] + "</br></br>Time Left to Complete Goal:</br>" + diffDays + " days</br></br>Money Saved:</br>$" + Balance +"</br></br>Money Needed:</br><div class='money_need'>$" + ((goals[i])[1] - Balance).toFixed(2) + "</div></br></div></div>";
 		}
 		checkdone();
 	},

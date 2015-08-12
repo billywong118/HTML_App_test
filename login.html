@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 <!--<link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>-->
 <!--<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>-->
@@ -25,28 +26,21 @@
 
 <form method="POST">
 
-<p id="login-id">
-Email: 
-<p><input type="text" id="email"></p>
-</p>
-
-<p id="login-pass">
-Password:
-<p><input type="password" id="password"></p>
-</p>
-
-<p id="login-button">
-<input type="submit" value="LOG IN" onclick="login()">
-</p>
+<table>
+<tr><td>Email:</td></tr>
+<tr><td><input type="text" id="email" class="field"></br></br></td></tr>
+<tr><td>Password:</tr></td>
+<tr><td><input type="password" id="password" class="field"></td></tr>
+<tr><td align="center"><input type="submit" value="LOG IN" onclick="login()" id="login-button"></td></tr>
 
 </form>
 
-<p id="forget">
-Forgot your password?</br><a href="forgot.html">Click here.</a>
+<tr class="forget"><td align="center"></br>Forgot your password? <a href="forgot.html">Click here.</a></td></tr>
 </br>
 </br>
-Don't have an account?</br><a href="signup.html">Sign up here.</a>
-</p>
+<tr class="forget"><td align="center">Don't have an account? <a href="signup.html">Sign up here.</a></td></tr>
+
+</table>
 
 </div>
 
