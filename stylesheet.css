@@ -161,21 +161,20 @@ SIGN UP
 -----------------------------*/
 
 #signup {
-	font-size: 25px;
+	font-size: 22.5px;
 	color: #676CFB;
-	margin-left: 13px;
 	font-family: 'Roboto', sans-serif;
 	width: 100%;
 }
 
 #signup input {
-	width: 100%/*182px*/;
+	width: 90%/*182px*/;
 	height: 32px;
 }
 
 #signup table {
 	margin: 29px 5% 0 5%;
-	width: 90%;
+	width: 95%;
 }
 
 #signup table td {
@@ -313,10 +312,10 @@ FORGOT PASSWORD
 --------------------------------*/
 
 #forgot {
-	margin-left: 10%;
 	color: #676CFB;
 	font-size: 30px;
 	font-family: 'Roboto', sans-serif;
+	width: 100%;
 }
 
 #forgot input {
@@ -325,7 +324,8 @@ FORGOT PASSWORD
 }
 
 #forgot table {
-	margin-top: 40px;
+	margin: 40px 10% 0 10%;
+	width: 80%;
 }
 
 #forgot table td {
