@@ -480,6 +480,7 @@ GOALS
 	width: 73%;
 	padding: 2.5%;
 	display: inline-block;
+	height: 30px;
 }
 
 .delete_button {
@@ -491,7 +492,7 @@ GOALS
 	font-size: 23px;
 	width: 20%;
 	display: inline-block;
-	height: 28px /*24px for bangers*/;
+	height: 30px /*24px for bangers*/;
 	padding: 2.5% 0;
 }
 

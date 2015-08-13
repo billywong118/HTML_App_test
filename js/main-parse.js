@@ -56,8 +56,15 @@ function get_goals() {
 		}
 		
 		var name_of_goal = replaced + "_expand";
+		
+		var name_to_show = (goals[i])[0];
+		
+		if (name_to_show.length > 18) {
+			name_to_show = name_to_show.substring(0,18) + "...";
+		}
+		
 		var delbutton_name = replaced + "_delete";
-		cell.innerHTML = "<div><div class='clickopen' onclick='expand(this)' id=" + replaced +">" + (goals[i])[0] + "</div><div class='delete_button'><button type='button' onclick='delete_goal(this)' id=" + delbutton_name + ">X</button></div><div class='current_goal' id=" + name_of_goal +">Cost:</br>$" + (goals[i])[1] + "</br></br>Time Left to Complete Goal:</br>" + diffDays + " days</br></br>Money Saved:</br>$" + Balance +"</br></br>Money Needed:</br><div class='money_need'>$" + ((goals[i])[1] - Balance).toFixed(2) + "</div></br></div></div>";
+		cell.innerHTML = "<div><div class='clickopen' onclick='expand(this)' id=" + replaced +">" + /*name*/name_to_show + "</div><div class='delete_button'><button type='button' onclick='delete_goal(this)' id=" + delbutton_name + ">X</button></div><div class='current_goal' id=" + name_of_goal +">Cost:</br>$" + (goals[i])[1] + "</br></br>Time Left to Complete Goal:</br>" + diffDays + " days</br></br>Money Saved:</br>$" + Balance +"</br></br>Money Needed:</br><div class='money_need'>$" + ((goals[i])[1] - Balance).toFixed(2) + "</div></br></div></div>";
 		}
 		checkdone();
 	},
