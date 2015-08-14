@@ -116,16 +116,16 @@ function delete_goal(to_del) {
 			goals = results[i].get("goals");
 			}
 		};
-		
-		var replaced = (goals[i])[0];
-		
-		
-		for (var h = 0; h < 100; h++) {
-		replaced = replaced.replace(' ', '--');
-		};
-		
-		
+				
 		for (var i = 0; i < goals.length; i++) {
+			
+			var replaced = (goals[i])[0];
+		
+		
+			for (var h = 0; h < 100; h++) {
+				replaced = replaced.replace(' ', '--');
+			};	
+			
 			if (replaced === goal_to_del) {
 				goals.splice(i, 1);
 				i -= 1;
